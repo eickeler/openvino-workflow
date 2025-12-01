@@ -68,15 +68,16 @@ jobs:
     - name: Create DEBIAN control files
       run: |
         mkdir -p debroot/DEBIAN
-        cat <<EOF > debroot/DEBIAN/control
+        cat > debroot/DEBIAN/control <<EOF
 Package: openvino-runtime
 Version: 2025.3.0
 Section: libs
 Priority: optional
 Architecture: amd64
 Maintainer: Your Name <you@example.com>
-Description: OpenVINO Runtime (C++ only), built from official sources (2025.3.0).
- No Python bindings. Ubuntu 22.04 build.
+Description: |
+  OpenVINO Runtime (C++ only), built from official sources (2025.3.0).
+  No Python bindings. Ubuntu 22.04 build. 
 EOF
 
     - name: Build .deb package
