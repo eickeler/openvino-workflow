@@ -1,4 +1,4 @@
-name: Build & Release OpenVINO 2025.3.0 .deb (Ubuntu 22.04)
+name: "Build & Release OpenVINO 2025.3.0 .deb (Ubuntu 22.04)"
 
 on:
   workflow_dispatch:
