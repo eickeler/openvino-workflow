@@ -65,21 +65,22 @@ jobs:
         cd openvino/build
         DESTDIR=$GITHUB_WORKSPACE/debroot make install
 
+
     - name: Create DEBIAN control files
+      shell: bash
       run: |
         mkdir -p debroot/DEBIAN
-        cat > debroot/DEBIAN/control <<EOF
-Package: openvino-runtime
-Version: 2025.3.0
-Section: libs
-Priority: optional
-Architecture: amd64
-Maintainer: Your Name <you@example.com>
-Description: |
-  OpenVINO Runtime (C++ only), built from official sources (2025.3.0).
-  No Python bindings. Ubuntu 22.04 build. 
-EOF
-
+        cat > debroot/DEBIAN/control <<'EOF'
+        Package: openvino-runtime
+        Version: 2025.3.0
+        Section: libs
+        Priority: optional
+        Architecture: amd64
+        Maintainer: Stefan Eickeler <eickeler@gnu.org>
+        Description: OpenVINO Runtime (C++ only), built from official sources (2025.3.0).
+         No Python bindings. Ubuntu 22.04 build.
+        EOF
+        
     - name: Build .deb package
       run: |
         dpkg-deb --build debroot openvino-runtime_2025.3.0_amd64.deb
@@ -89,6 +90,6 @@ EOF
       with:
         files: openvino-runtime_2025.3.0_amd64.deb
         # If run via workflow_dispatch, publish to "v2025.3.0"
-        tag_name: ${{ github.ref_name == 'refs/heads/main' && 'v2025.3.0' || github.ref_name }}
+        tag_name: ${{ github.ref_name == 'main' && 'v2025.3.0' || github.ref_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
