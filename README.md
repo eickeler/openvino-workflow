@@ -8,9 +8,10 @@ The repository does **not** include a build workflow or source code. Detailed in
 
 ## 📦 Provided Packages
 
-| Package                               | Description                              | Ubuntu Version |
-| ------------------------------------- | ---------------------------------------- | -------------- |
-| `openvino-runtime_2025.3.0_amd64.deb` | OpenVINO C++ runtime, no Python bindings | 22.04, 24.04   |
+| Package                                     | Description                              | Ubuntu Version |
+| ------------------------------------------- | ---------------------------------------- | -------------- |
+| `openvino-runtime_2025.3.0_22.04_amd64.deb` | OpenVINO C++ runtime, no Python bindings | 22.04          |
+| `openvino-runtime_2025.3.0_24.04_amd64.deb` | OpenVINO C++ runtime, no Python bindings | 24.04          |
 
 * Installed files are placed under: `/opt/openvino-runtime/`
 * The `.deb` packages can be installed offline using `dpkg`.
@@ -23,7 +24,7 @@ For Ubuntu 22.04:
 wget https://github.com/eickeler/openvino-workflow/releases/download/v2025.3.0/openvino-runtime_2025.3.0_22.04_amd64.deb
 
 # Install the package
-sudo dpkg -i openvino-runtime_2025.3.0_22.04__amd64.deb
+sudo dpkg -i openvino-runtime_2025.3.0_22.04_amd64.deb
 sudo apt --fix-broken install
 
 # Verify installation
