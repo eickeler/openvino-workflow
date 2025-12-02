@@ -37,7 +37,7 @@ For Ubuntu 24.04:
 wget https://github.com/eickeler/openvino-workflow/releases/download/v2025.3.0/openvino-runtime_2025.3.0_24.04_amd64.deb
 
 # Install the package
-sudo dpkg -i openvino-runtime_2025.3.0_24.04__amd64.deb
+sudo dpkg -i openvino-runtime_2025.3.0_24.04_amd64.deb
 sudo apt --fix-broken install
 
 # Verify installation
