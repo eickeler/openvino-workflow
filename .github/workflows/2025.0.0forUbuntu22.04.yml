@@ -88,7 +88,7 @@ jobs:
     - name: Upload to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
-        files: openvino-runtime_2025.3.0_22.04_amd64.deb
+        files: openvino-runtime_2025.0.0_22.04_amd64.deb
         # If run via workflow_dispatch, publish to "v2025.0.0"
         tag_name: ${{ github.ref_name == 'main' && 'v2025.0.0' || github.ref_name }}
       env:
