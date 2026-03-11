@@ -1,4 +1,4 @@
-# OpenVINO 2025.3.0 Offline .deb Packages for Ubuntu
+# OpenVINO 2025.3.0 and 2025.0.0 Offline .deb Packages for Ubuntu
 
 This repository provides **prebuilt `.deb` packages** of OpenVINO 2025.3.0 for **Ubuntu 22.04 and 24.04**. The packages are designed for **offline installation** on embedded or air-gapped systems and contain the **C++ runtime only**, without Python bindings.
 
